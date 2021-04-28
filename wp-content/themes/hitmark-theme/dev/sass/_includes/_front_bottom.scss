@@ -1,0 +1,10 @@
+.front_bottom {
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include _respond-to(769) {
+    height: 30vh;
+  }
+}

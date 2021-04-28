@@ -1,0 +1,49 @@
+.service {
+  padding-left: 67px;
+  padding-right: 67px;
+  box-sizing: border-box;
+  @include _respond-to(992) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  @include _respond-to(768) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  &_title {
+    display: block;
+    font-family: $inconsolata;
+    font-weight: 700;
+    line-height: 31px;
+    text-transform: uppercase;
+    padding-bottom: 22px;
+    @include _respond-to(992) {
+      font-size: 24px;
+      line-height: 25px;
+    }
+    @include _respond-to(768) {
+      font-size: 18px;
+      line-height: 19px;
+      padding-bottom: 14px;
+    }
+  }
+  &_name {
+    font-family: $inconsolata;
+    font-size: 20px;
+    line-height: 21px;
+    @include _respond-to(768) {
+      font-size: 14px;
+      line-height: 15px;
+    }
+  }
+  &_item {
+    font-family: $inconsolata;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 21px;
+    @include _respond-to(768) {
+      font-size: 14px;
+      line-height: 15px;
+    }
+  }
+}

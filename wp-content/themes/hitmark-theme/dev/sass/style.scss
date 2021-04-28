@@ -1,0 +1,26 @@
+@import "_mixins/settings";
+@import "_mixins/mixins";
+/* bootstrap styles */
+@import "_libs/_bootstrap/bootstrap-grid";
+@import "_libs/jquery.formstyler.css";
+/* defualt styles */
+@import "_default/default";
+/* humburger styles */
+@import "_default/hamburger";
+/* all styles */
+@import "_default/header";
+//@import "_default/menu";
+@import "_default/mobmenu";
+
+/* pages */
+@import "_includes/hero";
+@import "_includes/front_content";
+@import "_includes/front_bottom";
+@import "_includes/product";
+@import "_includes/gallery";
+@import "_includes/service";
+@import "_includes/dropdown";
+@import "_includes/contacts";
+@import "_includes/chars";
+
+@import "_default/footer";

@@ -1,0 +1,59 @@
+.product_chars {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(152px, 1fr) );
+  grid-gap: 3vw;
+  @include _respond-to(1320) {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr) );
+    grid-gap: 1vw;
+  }
+  &_wrap {
+    &:nth-child(n + 6) {
+      display: none;
+    }
+    &_item {
+      padding: 5px 0;
+      &:before {
+        content: none;
+      }
+      a {
+        color: $dark;
+        transition: .4s ease-in-out;
+        span {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          border: 1px solid $red;
+          color: $red;
+          text-align: center;
+          line-height: 24px;
+          font-size: 14px;
+          margin-right: 5px;
+          transition: .4s ease-in-out;
+        }
+        &:hover {
+          text-decoration: none;
+          color:red;
+          span {
+            transform: rotate(360deg);
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.post_item {
+  padding-bottom: 50px;
+  h4 {
+    font-family: $inconsolata;
+    font-weight: 700;
+    color: $red;
+    padding-bottom: 10px;
+  }
+}
+
+.post_more {
+  margin-top: 8px;
+}

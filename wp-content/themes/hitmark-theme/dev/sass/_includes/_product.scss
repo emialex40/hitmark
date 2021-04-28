@@ -1,0 +1,319 @@
+.product {
+  width: 100%;
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-top: 155px;
+  @include _respond-to(768) {
+    margin-top: 94px;
+    height: 66vh;
+  }
+  &_wrap  {
+    position: relative;
+  }
+  &_header {
+    display: inline-block;
+    font-family: $inconsolata;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 103px;
+    border-radius: 0 0 15px 15px;
+    letter-spacing: -2.2px;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 0 30px;
+    box-sizing: border-box;
+    margin-top: -45px;
+    min-width: 349px;
+    @include _respond-to(992) {
+      font-size: 30px;
+      line-height: 44px;
+      min-width: 220px;
+    }
+    @include _respond-to(768) {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include _respond-to(480) {
+      min-width: 100%;
+    }
+    @include _respond-to(376) {
+      font-size: 24px;
+    }
+  }
+  &_content {
+    padding-top: 90px;
+    padding-bottom: 66px;
+    @include _respond-to(992) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    h2 {
+      font-family: $inconsolata;
+      font-weight: 700;
+      line-height: 52px;
+      text-transform: uppercase;
+      color: $dark;
+      padding-bottom: 30px;
+      @include _respond-to(992) {
+        font-size: 40px;
+      }
+      @include _respond-to(768) {
+        font-size: 30px;
+        line-height: 31px;
+        padding-bottom: 20px;
+      }
+    }
+    p {
+      font-size: 20px;
+      line-height: 27px;
+      padding-bottom: 25px;
+      &:last-child {
+        padding-bottom: 0;
+      }
+      @include _respond-to(768) {
+        font-size: 14px;
+        line-height: 19px;
+      }
+      em {
+        font-size: 30px;
+        font-style: italic;
+        line-height: 41px;
+        color: $black;
+        @include _respond-to(577) {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+    &_yellow {
+      padding-top: 40px;
+      @include _respond-to(768) {
+        padding-top: 28px;
+      }
+    }
+  }
+  &_list {
+    padding-bottom: 100px;
+    @include _respond-to(992) {
+      padding-bottom: 65px;
+    }
+    &_all {
+      margin-bottom: 63px;
+      @include _respond-to(768) {
+        margin-bottom: 30px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &_item {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      cursor: pointer;
+    }
+    &_wrap {
+      width: calc(100% - 38px);
+      border-bottom: 2px solid $grey;
+    }
+    &_title {
+      font-family: $inconsolata;
+      font-weight: 700;
+      line-height: 31px;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+    }
+    &_desc {
+      display: none;
+      &_flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      &_cont {
+        width: 99%;
+        background: $grey;
+        padding: 20px 25px 25px;
+        box-sizing: border-box;
+        @include _respond-to(1199) {
+          width: 98%;
+        }
+        @include _respond-to(992) {
+          width: 96%;
+        }
+        @include _respond-to(992) {
+          width: 94%;
+        }
+        @include _respond-to(558) {
+          width: 93%;
+        }
+        @include _respond-to(494) {
+          width: 92%;
+        }
+        @include _respond-to(445) {
+          width: 91%;
+        }
+        @include _respond-to(404) {
+          width: 90%;
+        }
+        @include _respond-to(404) {
+          width: 89%;
+        }
+        @include _respond-to(343) {
+          width: 88%;
+        }
+        @include _respond-to(320) {
+          width: 87%;
+        }
+      }
+      &_line {
+        width: 38px;
+        height: auto;
+        border-radius: 0 0 10px 0;
+      }
+      p {
+        padding-top: 20px;
+        font-size: 20px;
+        line-height: 27px;
+        padding-bottom: 25px;
+      }
+      strong {
+        font-size: 20px;
+        line-height: 27px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $dark;
+      }
+    }
+    &_btn {
+      width: 38px;
+      border-radius: 0 0 10px 0;
+      cursor: pointer;
+      height: 43px;
+      position: relative;
+      transition: .5s ease;
+      @include _respond-to(768) {
+        height: 41px;
+      }
+      i {
+        display: inline-block;
+        color: $white;
+        font-size: 24px;
+        position: relative;
+        top: 9px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      p {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $red;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      &_yellow {
+        i {
+          color: $dark;
+        }
+      }
+    }
+    &_ad {
+      padding-bottom: 50px;
+    }
+  }
+  &_book {
+    margin-bottom: 124px;
+    @include _respond-to(992) {
+      margin-bottom: 70px;
+    }
+    &_wrap {
+      padding: 36px 0 58px;
+      border-radius: 0 0 15px 15px;
+      @include _respond-to(992) {
+        padding: 20px 0 35px;
+      }
+      @include _respond-to(768) {
+        padding: 20px 0 22px;
+      }
+    }
+    &_title {
+      font-family: $inconsolata;
+      text-align: center;
+      text-transform: uppercase;
+      padding-bottom: 27px;
+      @include _respond-to(992) {
+        font-size: 35px;
+      }
+      @include _respond-to(768) {
+        font-size: 30px;
+        padding-bottom: 15px;
+      }
+    }
+    &_item {
+      font-family: $inconsolata;
+      font-size: 22px;
+      line-height: 23px;
+      text-transform: uppercase;
+      text-align: center;
+      @include _respond-to(992) {
+        font-size: 18px;
+        line-height: 20px;
+      }
+      @include _respond-to(768) {
+        font-size: 14px;
+        line-height: 15px;
+      }
+      i {
+        padding-right: 5px;
+      }
+    }
+    &_link_row {
+      text-align: center;
+      padding-bottom: 15px;
+      @include _respond-to(768) {
+        padding-bottom: 5px;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.ad_title {
+  display: block;
+  text-transform: uppercase;
+  color: $dark;
+  text-align: center;
+  padding-bottom: 50px;
+  @include _respond-to(768) {
+    padding-bottom: 28px;
+  }
+}
+
+.falgs_row {
+  padding-bottom: 40px;
+  img {
+    max-width: 560px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center left;
+  }
+}
+
+//.close .product_list_btn {
+//  height: 41px;
+//}
+//
+//.open .product_list_btn {
+//  height: 100%;
+//}

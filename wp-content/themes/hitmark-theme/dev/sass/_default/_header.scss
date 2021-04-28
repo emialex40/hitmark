@@ -1,0 +1,122 @@
+.header {
+  border-radius: 0 0 15px 15px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  &_mob_menu {
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    @include _respond-to(992) {
+      display: flex;
+    }
+  }
+  &_logo {
+    .logo {
+      padding-top: 31px;
+      padding-bottom: 38px;
+      @include _respond-to(768) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      a {
+        display: inline-block;
+      }
+      object {
+        width: 100px;
+        height: 36px;
+        pointer-events: none;
+        @include _respond-to(768) {
+          width: 85px;
+          height: 25px;
+        }
+      }
+      img {
+        width: 101px;
+        height: 36px;
+      }
+    }
+  }
+  &_menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 746px;
+    background: transparent;
+    height: inherit;
+    padding: 41px 51px 34px;
+    line-height: 1.3;
+    box-sizing: border-box;
+    border-radius: 0 0 15px 15px;
+    @include _respond-to(992) {
+      display: none;
+    }
+    &:hover {
+      background: $grey;
+      .header_menu_sub {
+        display: block;
+      }
+    }
+    &_links {
+      display: block;
+      .menu-item {
+        display: inline-block;
+        padding: 0 19px;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+        .items {
+          a {
+            display: inline-block;
+            font-family: $inconsolata;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 21px;
+            letter-spacing: -0.8px;
+            border-bottom: 2px solid transparent;
+            box-sizing: border-box;
+            text-transform: lowercase;
+            color: $dark;
+            &:hover {
+              border-bottom: 2px solid $dark;
+            }
+          }
+        }
+      }
+    }
+  }
+  &_menu_sub {
+    display: none;
+    padding-top: 8px;
+    &_list {
+      display: inline-block;
+    }
+    &_item {
+      .item {
+        a {
+          font-family: $inconsolata;
+          font-size: 15px;
+          line-height: 16px;
+          color: $dark;
+          text-transform: uppercase;
+          border-bottom: 1px solid transparent;
+          box-sizing: border-box;
+          &:hover {
+            border-bottom: 1px solid $dark;
+          }
+        }
+      }
+    }
+    &_right {
+      float: right;
+      margin-right: 32px;
+    }
+  }
+}

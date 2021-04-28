@@ -1,0 +1,49 @@
+.content {
+  padding: 115px 0;
+  @include _respond-to(768) {
+    padding: 64px 0;
+  }
+  &_header {
+    font-family: $inconsolata;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $dark;
+  }
+  &_wrapper {
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 27px;
+      color: $dark;
+      padding-bottom: 20px;
+      @include _respond-to(768) {
+        font-size: 14px;
+        line-height: 19px;
+        padding-bottom: 14px;
+      }
+    }
+  }
+  &_hide {
+    display: none;
+  }
+  &_more {
+    font-family: $inconsolata;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    border-bottom: 2px solid $red;
+    box-sizing: border-box;
+    @include _respond-to(768) {
+      font-size: 14px;
+      line-height: 18px;
+      border-bottom: 1px solid $red;
+    }
+    &:hover {
+      border-bottom: 2px solid transparent;
+      @include _respond-to(768) {
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+}
