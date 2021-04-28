@@ -9,17 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap">
 
     <?php
-    wp_head();
     $favicon = get_option('theme_favicon');
     $logo = get_field('header_logo', 'option');
     ?>
-    <meta name='apple-itunes-app' content='app-id=​myAppStoreID​'>
     <link rel="icon" href="<?php print $favicon; ?>" type="image/x-icon"/>
     <link rel="shortcut icon" href="<?php print $favicon; ?>" type="image/x-icon"/>
 
     <?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Lighthouse') === false) : ?>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" />
     <?php endif; ?>
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <script>

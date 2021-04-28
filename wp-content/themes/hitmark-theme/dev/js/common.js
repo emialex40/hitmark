@@ -176,4 +176,15 @@ jQuery(document).ready(function ($) {
            }
        })
     })
+
+    const btnText = $('.js-show').text();
+
+    $('.js-show').on('click', function() {
+        $(this).toggleClass('open')
+        if ( $(this).hasClass('open') ) {
+            $(this).text('pokaż mniej')
+        } else {
+            $(this).text(btnText);
+        }
+    })
 })
